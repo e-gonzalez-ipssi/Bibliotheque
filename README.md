@@ -10,7 +10,18 @@ NodeJS : https://nodejs.org/en/
 
 git clone https://github.com/e-gonzalez-ipssi/Bibliotheque.git
 
-copy your database into the root section of backend and name it : romans.tsv
+copy your database into the root section of backend and name it : romans.tsv\
+it must contain the following collumn :
+ - title
+ - author
+ - tomenumber
+ - editeur
+ - pagenumber
+ - prix
+ - isbn
+ - resume
+ - image
+ - commentaire
 
 cmd 1\
 cd frontend\
