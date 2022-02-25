@@ -13,11 +13,11 @@ https://github.com/e-gonzalez-ipssi/Bibliotheque.git\
 cmd 1\
 cd frontend\
 npm install\
-npm run start\
+npm run start
 
 cmd 2\
 cd backend\
 npm install\
-npm run start\
+npm run start
 
 # Enjoy
