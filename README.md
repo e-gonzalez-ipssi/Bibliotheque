@@ -8,16 +8,16 @@ NodeJS : https://nodejs.org/en/
 
 # Install
 
-https://github.com/e-gonzalez-ipssi/Bibliotheque.git
+https://github.com/e-gonzalez-ipssi/Bibliotheque.git\
 
-cmd 1
-cd frontend
-npm install
-npm run start
+cmd 1\
+cd frontend\
+npm install\
+npm run start\
 
-cmd 2
-cd backend
-npm install
-npm run start
+cmd 2\
+cd backend\
+npm install\
+npm run start\
 
 # Enjoy
