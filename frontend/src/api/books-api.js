@@ -1,30 +1,30 @@
 import { gql } from '@apollo/client';
 
 export const GET_ROMANS = gql`
-    query getRomans {
-        Roman {
+    query Query {
+        getRomans {
             id
             title
-            image
             tomenumber
+            image
         }
     }
 `;
 
 export const GET_ROMAN = gql`
-    query getRoman ($id: Int!) {
-        Roman {
-            id
-            title
-            image
-            tomenumber
-            author
-            editeur
-            pagenumber
-            prix
-            isbn
-            resume
-            commentaire
+    query Query($getRomanId: Int!) {
+        getRoman(id: $getRomanId) {
+        id
+        title
+        author
+        tomenumber
+        editeur
+        pagenumber
+        prix
+        isbn
+        resume
+        image
+        commentaire
         }
     }
 `;
