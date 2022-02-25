@@ -10,6 +10,8 @@ NodeJS : https://nodejs.org/en/
 
 git clone https://github.com/e-gonzalez-ipssi/Bibliotheque.git
 
+copy your database into the root section of backend and name it : romans.tsv
+
 cmd 1\
 cd frontend\
 npm install\
