@@ -4,7 +4,6 @@ const romanResolvers = {
     Query: {
         getRomans: () => {
             const data = tsvToJSON("romans.tsv");
-            console.log(data)
             return data;
         },
         getRoman: (parent, args, context, info) => {

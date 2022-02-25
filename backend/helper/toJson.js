@@ -11,7 +11,11 @@ function tsvToJSON(tsv) {
         const currentline = lines[i].split("\t");
 
         for (let j = 0; j < headers.length; j++) {
-            obj[headers[j]] = j == headers.length - 1 ? currentline[j].slice(0, -1) : currentline[j];
+            obj[headers[j]] = j == headers.length - 1 ? 
+                i == lines.length -1 ? 
+                    currentline[j] 
+                    : currentline[j].slice(0, -1) 
+                : currentline[j];
         }
         
         obj["id"] = i - 1;
