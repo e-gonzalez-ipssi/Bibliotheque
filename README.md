@@ -8,7 +8,7 @@ NodeJS : https://nodejs.org/en/
 
 # Install
 
-https://github.com/e-gonzalez-ipssi/Bibliotheque.git\
+git clone https://github.com/e-gonzalez-ipssi/Bibliotheque.git\
 
 cmd 1\
 cd frontend\
