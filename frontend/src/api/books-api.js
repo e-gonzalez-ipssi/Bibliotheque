@@ -12,8 +12,8 @@ export const GET_ROMANS = gql`
 `;
 
 export const GET_ROMAN = gql`
-    query Query($getRomanId: Int!) {
-        getRoman(id: $getRomanId) {
+    query Query($id: Int!) {
+        getRoman(id: $id) {
         id
         title
         author
