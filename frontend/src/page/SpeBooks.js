@@ -18,7 +18,7 @@ function SpeBooks(props) {
     const books = data.getSpeBooks;
     return (
         <>
-            <TitleContent title="Romans" />
+            <TitleContent title="Specials Books" />
             <Grid container sx={{ alignItems: "center" }}>
             {
                 books.map((book) => {

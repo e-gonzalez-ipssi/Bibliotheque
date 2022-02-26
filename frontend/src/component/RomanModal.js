@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { GET_LN, GET_ROMAN, GET_SPE_BOOK, GET_ART_BOOK } from "../api/books-api";
+import { GET_LN, GET_ROMAN, GET_SPE_BOOK, GET_ART_BOOK, GET_MANGA } from "../api/books-api";
 
 function RomanModal ({ id, open, handleClose, api }) {
     const { data, loading, error } = useQuery(api, { variables: { id } });
@@ -29,6 +29,9 @@ function RomanModal ({ id, open, handleClose, api }) {
     }
     if (api === GET_ART_BOOK) {
         book = data.getArtBook;
+    }
+    if (api === GET_MANGA) {
+        book = data.getManga;
     }
     
 
@@ -81,11 +84,13 @@ function RomanModal ({ id, open, handleClose, api }) {
                                     Prix : {book.prix}€
                                 </Typography>
                             </Grid>
-                            <Grid item md={4}>
-                                <Typography id="isbn">
-                                    ISBN : {book.isbn}
-                                </Typography>
-                            </Grid>
+                            {book.isbn && (
+                                <Grid item md={4}>
+                                    <Typography id="isbn">
+                                        ISBN : {book.isbn}
+                                    </Typography>
+                                </Grid>
+                            )}
                             <Grid item md={4}>
                                 <Typography id="pagenumber">
                                     n° page : {book.pagenumber}

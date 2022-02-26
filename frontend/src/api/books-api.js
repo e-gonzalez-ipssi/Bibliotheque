@@ -115,3 +115,31 @@ export const GET_ART_BOOK = gql`
         }
     }
 `;
+
+export const GET_MANGAS = gql`
+    query Query {
+        getMangas {
+            id
+            title
+            tomenumber
+            image
+        }
+    }
+`;
+
+export const GET_MANGA = gql`
+    query Query($id: Int!) {
+        getManga(id: $id) {
+            id
+            title
+            author
+            tomenumber
+            editeur
+            pagenumber
+            prix
+            resume
+            image
+            commentaire
+        }
+    }
+`;

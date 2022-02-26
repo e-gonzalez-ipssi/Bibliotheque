@@ -4,6 +4,7 @@ import Romans from "./page/Romans"
 import LNs from "./page/LNs"
 import SpeBooks from "./page/SpeBooks"
 import ArtBooks from "./page/ArtBooks"
+import Mangas from "./page/Mangas";
 
 const MAP_ROUTES = [
     { path: "/", element: <Navigate to="/app/romans" /> },
@@ -13,6 +14,7 @@ const MAP_ROUTES = [
         { path: "lns", element: <LNs /> },
         { path: "spebooks", element: <SpeBooks /> },
         { path: "artbooks", element: <ArtBooks /> },
+        { path: "mangas", element: <Mangas /> },
     ]},
 ];
 

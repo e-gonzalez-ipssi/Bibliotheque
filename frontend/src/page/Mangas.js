@@ -1,13 +1,13 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { GET_ART_BOOKS, GET_ART_BOOK } from "../api/books-api"
+import { GET_MANGAS, GET_MANGA } from "../api/books-api"
 import TitleContent from "../component/TitleContent";
 import Card from "../component/Card";
 import Grid from "@mui/material/Grid";
 
 
-function ArtBooks(props) {
-    const { data, loading, error } = useQuery(GET_ART_BOOKS);
+function Mangas(props) {
+    const { data, loading, error } = useQuery(GET_MANGAS);
     if(loading) {
         return <></>
     }
@@ -15,16 +15,16 @@ function ArtBooks(props) {
         return <></>
     }
 
-    const books = data.getArtBooks;
+    const books = data.getMangas;
     return (
         <>
-            <TitleContent title="Art Books" />
+            <TitleContent title="Mangas" />
             <Grid container sx={{ alignItems: "center" }}>
             {
                 books.map((book) => {
                     return (
                         <Grid item xs={2}>
-                            <Card data={book} key={book.id} api={GET_ART_BOOK}/>
+                            <Card data={book} key={book.id} api={GET_MANGA}/>
                         </Grid>
                     )
                 })
@@ -34,4 +34,4 @@ function ArtBooks(props) {
     )
 } 
 
-export default ArtBooks;
+export default Mangas;

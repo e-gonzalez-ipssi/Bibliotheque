@@ -18,7 +18,7 @@ function LNs(props) {
     const books = data.getLNs;
     return (
         <>
-            <TitleContent title="Romans" />
+            <TitleContent title="Light Novels" />
             <Grid container sx={{ alignItems: "center" }}>
             {
                 books.map((book) => {
