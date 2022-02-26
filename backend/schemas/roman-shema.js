@@ -12,6 +12,8 @@ const romanSchemas = gql`
         getArtBook(id: Int!): Books
         getMangas: [Manga]
         getManga(id: Int!): Manga
+        getCDs: [CD]
+        getCD(id: Int!): CD
     }
 
     type Books {
@@ -37,6 +39,17 @@ const romanSchemas = gql`
         pagenumber: String!
         prix: String!
         resume: String!
+        image: String
+        commentaire: String
+    }
+
+    type CD {
+        id: Int!
+        title: String!
+        cd: Int!
+        prix: String!
+        resume: String!
+        isbn: String!
         image: String
         commentaire: String
     }

@@ -60,7 +60,7 @@ export const GET_LN = gql`
 
 export const GET_SPE_BOOKS = gql`
     query Query {
-        getArtBooks {
+        getSpeBooks {
             id
             title
             tomenumber
@@ -71,7 +71,7 @@ export const GET_SPE_BOOKS = gql`
 
 export const GET_SPE_BOOK = gql`
     query Query($id: Int!) {
-        getArtBook(id: $id) {
+        getSpeBook(id: $id) {
             id
             title
             author
@@ -138,6 +138,32 @@ export const GET_MANGA = gql`
             pagenumber
             prix
             resume
+            image
+            commentaire
+        }
+    }
+`;
+
+export const GET_CDS = gql`
+    query Query {
+        getCDs {
+            id
+            title
+            cd
+            image
+        }
+    }
+`;
+
+export const GET_CD = gql`
+    query Query($id: Int!) {
+        getCD(id: $id) {
+            id
+            title
+            cd
+            prix
+            resume
+            isbn
             image
             commentaire
         }

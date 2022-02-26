@@ -9,7 +9,7 @@ const pages = [
     { name: "Mangas", link: "/app/mangas" },
     { name: "Light Novel", link: "/app/lns" },
     { name: "Art Books  ", link: "/app/artbooks" },
-    { name: "CD / DVD", link: "/app/romans" },
+    { name: "CD / DVD", link: "/app/cds" },
 ];
 
 function TopBar (props) {

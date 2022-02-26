@@ -42,6 +42,14 @@ const romanResolvers = {
             const data = tsvToJSON("mangas.tsv");
             return data[args.id];
         },
+        getCDs: () => {
+            const data = tsvToJSON("cds.tsv");
+            return data;
+        },
+        getCD: (parent, args, context, info) => {
+            const data = tsvToJSON("cds.tsv");
+            return data[args.id];
+        },
     },
 };
 

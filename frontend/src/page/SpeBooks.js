@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { GET_SPE_BOOKS, GET_SPE_BOOK } from "../api/books-api"
+import { GET_SPE_BOOKS, GET_SPE_BOOK } from "../api/object-api"
 import TitleContent from "../component/TitleContent";
 import Card from "../component/Card";
 import Grid from "@mui/material/Grid";
