@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import RomanModal from "./RomanModal";
 
-function Card ({ data }) {
+function Card ({ data, api }) {
     const [open, setOpen] = useState(false);
 
     const onClick = () => {
@@ -36,7 +36,7 @@ function Card ({ data }) {
                     </Grid>
                 </Grid>
             </Box>
-            <RomanModal id={data.id} open={open} handleClose={handleClose} />
+            <RomanModal id={data.id} open={open} handleClose={handleClose} api={api}/>
             
         </>
     )

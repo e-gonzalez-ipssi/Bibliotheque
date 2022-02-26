@@ -2,22 +2,23 @@ import { gql } from 'apollo-server';
 
 const romanSchemas = gql`
     type Query {
-        getRomans: [Roman]
-        getRoman(id: Int!): Roman
-        getSeries(id: Int!): [Roman]
+        getRomans: [Books]
+        getRoman(id: Int!): Books
+        getLNs: [Books]
+        getLN(id: Int!): Books
     }
 
-    type Roman {
+    type Books {
         id: Int!
         title: String!
         author: String!
         tomenumber: String!
         editeur: String!
-        pagenumber: Int!
+        pagenumber: String!
         prix: String!
         isbn: String!
         resume: String!
-        image: String!
+        image: String
         commentaire: String
     }
 `;

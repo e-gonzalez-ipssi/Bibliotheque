@@ -1,15 +1,14 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { GET_ROMAN } from "../api/books-api";
 import Modal from '@mui/material/Modal';
 import Paper from '@mui/material/Paper';
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { Divider } from "@mui/material";
+import { GET_LN, GET_ROMAN } from "../api/books-api";
 
-function RomanModal ({ id, open, handleClose }) {
-    const { data, loading, error } = useQuery(GET_ROMAN, { variables: { id } });
+function RomanModal ({ id, open, handleClose, api }) {
+    const { data, loading, error } = useQuery(api, { variables: { id } });
     if(loading) {
         return <></>
     }
@@ -17,7 +16,15 @@ function RomanModal ({ id, open, handleClose }) {
         return <></>
     }
 
-    const book = data.getRoman;
+    let book = {};
+    
+    if (api == GET_ROMAN) {
+        book = data.getRoman;
+    }
+    if (api == GET_LN) {
+        book = data.getLN;
+    }
+    
 
     return (
         <Modal

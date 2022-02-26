@@ -1,13 +1,13 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { GET_ROMANS } from "../api/books-api"
+import { GET_LNS, GET_LN } from "../api/books-api"
 import TitleContent from "../component/TitleContent";
 import Card from "../component/Card";
 import Grid from "@mui/material/Grid";
 
 
-function Biblioteque(props) {
-    const { data, loading, error } = useQuery(GET_ROMANS);
+function LNs(props) {
+    const { data, loading, error } = useQuery(GET_LNS);
     if(loading) {
         return <></>
     }
@@ -15,16 +15,16 @@ function Biblioteque(props) {
         return <></>
     }
 
-    const books = data.getRomans;
+    const books = data.getLNs;
     return (
         <>
-            <TitleContent title="Bibliotheque" />
+            <TitleContent title="Romans" />
             <Grid container sx={{ alignItems: "center" }}>
             {
                 books.map((book) => {
                     return (
                         <Grid item xs={2}>
-                            <Card data={book} key={book.id} />
+                            <Card data={book} key={book.id} api={GET_LN}/>
                         </Grid>
                     )
                 })
@@ -34,4 +34,4 @@ function Biblioteque(props) {
     )
 } 
 
-export default Biblioteque;
+export default LNs;

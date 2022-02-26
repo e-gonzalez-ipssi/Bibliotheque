@@ -1,12 +1,14 @@
 import { Navigate } from "react-router-dom";
 import Interface from "./page/Interface"
-import Bibliotheque from "./page/Bibliotheque"
+import Romans from "./page/Romans"
+import LNs from "./page/LNs"
 
 const MAP_ROUTES = [
-    { path: "/", element: <Navigate to="/app/bibliotheque" /> },
+    { path: "/", element: <Navigate to="/app/romans" /> },
     { path: "/app", element: <Interface />, children: [
-        { index: true, element: <Navigate to="/app/bibliotheque" /> },
-        { path: "Bibliotheque", element: <Bibliotheque /> },
+        { index: true, element: <Navigate to="/app/romans" /> },
+        { path: "romans", element: <Romans /> },
+        { path: "lns", element: <LNs /> },
     ]},
 ];
 

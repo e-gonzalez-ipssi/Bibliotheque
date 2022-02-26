@@ -10,6 +10,14 @@ const romanResolvers = {
             const data = tsvToJSON("romans.tsv");
             return data[args.id];
         },
+        getLNs: () => {
+            const data = tsvToJSON("lns.tsv");
+            return data;
+        },
+        getLN: (parent, args, context, info) => {
+            const data = tsvToJSON("lns.tsv");
+            return data[args.id];
+        },
     },
 };
 

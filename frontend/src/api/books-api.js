@@ -14,17 +14,46 @@ export const GET_ROMANS = gql`
 export const GET_ROMAN = gql`
     query Query($id: Int!) {
         getRoman(id: $id) {
-        id
-        title
-        author
-        tomenumber
-        editeur
-        pagenumber
-        prix
-        isbn
-        resume
-        image
-        commentaire
+            id
+            title
+            author
+            tomenumber
+            editeur
+            pagenumber
+            prix
+            isbn
+            resume
+            image
+            commentaire
+        }
+    }
+`;
+
+export const GET_LNS = gql`
+    query Query {
+        getLNs {
+            id
+            title
+            tomenumber
+            image
+        }
+    }
+`;
+
+export const GET_LN = gql`
+    query Query($id: Int!) {
+        getLN(id: $id) {
+            id
+            title
+            author
+            tomenumber
+            editeur
+            pagenumber
+            prix
+            isbn
+            resume
+            image
+            commentaire
         }
     }
 `;
