@@ -1,14 +1,15 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import { Button, Link } from "@mui/material";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const pages = [
-    { name: "Romans", link: "/app/biliotheque" },
-    { name: "Livres Spéciaux", link: "/app/biliotheque" },
-    { name: "Mangas", link: "/app/biliotheque" },
+    { name: "Romans", link: "/app/romans" },
+    { name: "Livres Spéciaux", link: "/app/romans" },
+    { name: "Mangas", link: "/app/romans" },
     { name: "Light Novel", link: "/app/lns" },
-    { name: "Art Books  ", link: "/app/biliotheque" },
-    { name: "CD / DVD", link: "/app/biliotheque" },
+    { name: "Art Books  ", link: "/app/romans" },
+    { name: "CD / DVD", link: "/app/romans" },
 ];
 
 function TopBar (props) {
