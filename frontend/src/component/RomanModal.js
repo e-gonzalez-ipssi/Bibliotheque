@@ -25,10 +25,10 @@ function RomanModal ({ id, open, handleClose, api }) {
         object = data.getLN;
     }
     if (api === GET_SPE_BOOK) {
-        object = data.getSpeobject;
+        object = data.getSpeBook;
     }
     if (api === GET_ART_BOOK) {
-        object = data.getArtobject;
+        object = data.getArtBook;
     }
     if (api === GET_MANGA) {
         object = data.getManga;
