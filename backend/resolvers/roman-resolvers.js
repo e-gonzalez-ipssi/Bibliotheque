@@ -18,6 +18,22 @@ const romanResolvers = {
             const data = tsvToJSON("lns.tsv");
             return data[args.id];
         },
+        getSpeBooks: () => {
+            const data = tsvToJSON("livresspeciaux.tsv");
+            return data;
+        },
+        getSpeBook: (parent, args, context, info) => {
+            const data = tsvToJSON("livresspeciaux.tsv");
+            return data[args.id];
+        },
+        getArtBooks: () => {
+            const data = tsvToJSON("artbooks.tsv");
+            return data;
+        },
+        getArtBook: (parent, args, context, info) => {
+            const data = tsvToJSON("artbooks.tsv");
+            return data[args.id];
+        },
     },
 };
 

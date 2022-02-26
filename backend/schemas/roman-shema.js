@@ -6,6 +6,10 @@ const romanSchemas = gql`
         getRoman(id: Int!): Books
         getLNs: [Books]
         getLN(id: Int!): Books
+        getSpeBooks: [Books]
+        getSpeBook(id: Int!): Books
+        getArtBooks: [Books]
+        getArtBook(id: Int!): Books
     }
 
     type Books {

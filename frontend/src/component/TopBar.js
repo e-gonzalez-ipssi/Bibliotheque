@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const pages = [
     { name: "Romans", link: "/app/romans" },
-    { name: "Livres Spéciaux", link: "/app/romans" },
+    { name: "Livres Spéciaux", link: "/app/spebooks" },
     { name: "Mangas", link: "/app/romans" },
     { name: "Light Novel", link: "/app/lns" },
-    { name: "Art Books  ", link: "/app/romans" },
+    { name: "Art Books  ", link: "/app/artbooks" },
     { name: "CD / DVD", link: "/app/romans" },
 ];
 
